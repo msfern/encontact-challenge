@@ -9,6 +9,10 @@
   --item: #333;
   --selectedItem: #3E6250;
   --titleItem: #5AB075;
+  --scrollbarTrack: #212121;
+  --scrollbarThumb: #C8C8C8;
+  --black: #000;
+  --blue: #0077D3;
 }
 
 * {
@@ -27,4 +31,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-size: 14px;
   line-height: 1.4rem;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: var(--scrollbarTrack);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbarThumb);
+  border-radius: 10px;
 }
