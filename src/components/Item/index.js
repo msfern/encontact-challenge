@@ -3,9 +3,9 @@ import './style.css';
 
 const Item = ({ details, index, deleteEmail, markAsRead, toggleRead, toggleSelect }) => {
   return (
-    <div className={`item${details.read ? ' is-read' : ''}${details.selected ? ' selected' : ''}`} onClick={() => markAsRead(index)}>
+    <div className={`item${details.read ? ' is-read' : ''}${details.selected ? ' selected' : ''}${details.showSelector ? ' selector-visible' : ''}`} onClick={() => markAsRead(index)}>
       <div className='item-left'>
-        <div className={`item-left__container${details.showSelector ? ' selector-visible' : ''}`}>
+        <div className='item-left__container'>
           <span className='initial'>{details.initials}</span>
           <input className='checkbox' type="checkbox"
             checked={details.selected}
