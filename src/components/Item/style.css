@@ -15,8 +15,17 @@
 }
 
 .item-body__top .sender {
+  flex: 1;
   color: var(--textColor);
   font-weight: 600;
+}
+
+.item-body__top .icons span{
+  color: var(--textColor);
+}
+
+.item-body__top .icons span:not(:last-child) {
+  margin-right: 12px;
 }
 
 .item-body__middle {

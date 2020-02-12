@@ -12,7 +12,20 @@ const Item = () => {
       <div className='item-body'>
         <div className='item-body__top'>
           <div className='sender'>Remetente</div>
-          <div className='icons'></div>
+          <div className='icons'>
+            <span>
+              <i className="far fa-trash-alt"></i>
+            </span>
+            <span>
+              <i className="far fa-envelope"></i>
+            </span>
+            <span>
+              <i className="far fa-flag"></i>
+            </span>
+            <span>
+              <i className="fas fa-thumbtack"></i>
+            </span>
+          </div>
         </div>
         <div className='item-body__middle'>
           <div className='title'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, quisquam assumenda dolor dolores nemo a consequatur ea blanditiis ut eaque reiciendis! Fugit debitis quaerat autem facilis veritatis numquam sed alias!</div>
