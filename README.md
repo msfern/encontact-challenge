@@ -1,4 +1,4 @@
-<p align="center">
+<p align="center" style='background-color:#333'>
   <img src="logo.png" width="200" alt="enContact">
 </p>
 
@@ -30,7 +30,7 @@ The JSON that works as API is being fetched using the Axios lib. After being fet
 
 Curiously enough, my main challenge in this project was the CSS. Since I'm using conditional classes, hover conditions and custom checkboxes, I got a bit overwhelmed. But nonetheless, I'm pretty happy with the result.
 
-Finally, PropTypes were added to the projects, with the goal to type check all the props used in the application.
+Finally, PropTypes were added to the project, with the goal to type check all the props used in the application.
 
 ## 🎨 Palette
 
