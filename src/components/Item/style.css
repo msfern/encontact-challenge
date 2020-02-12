@@ -17,7 +17,7 @@
 }
 
 .item + .item {
-  border-top: 1px solid var(--black);
+  border-top: 1px solid var(--hoveredItem);
 }
 
 .item:hover {
@@ -54,7 +54,7 @@
 }
 
 .item.selector-visible.selected .item-left__container .checkbox {
-  border: 1px solid var(--black);
+  border: 1px solid var(--hoveredItem);
 }
 
 .item.selected .item-body__top .icons {
