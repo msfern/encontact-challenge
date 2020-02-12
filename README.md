@@ -1,68 +1,69 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <img src="logo.png" width="200" alt="enContact">
+</p>
 
-## Available Scripts
+# 
 
-In the project directory, you can run:
+<h2 align="center">
+	Front End Challenge
+</h2>
 
-### `yarn start`
+![Application Preview](print.png)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 📙 Overview
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+As per the [challenge description](https://github.com/EnkiGroup/DevPlenoTest/blob/master/README.md), the goal of this project was to create a small component based on Office365's email application. Some of the functionalities present in this application are:
 
-### `yarn test`
+- **Delete emails.** By clicking on the 'trash bin' icon, the chosen email will be deleted.
+- **Toggle 'read' flag.** Besides marking the email as read by clicking anywhere in its area, clicking the 'letter' icon will toggle its 'read' flag.
+- **Responsive interface.** It's completely mobile friendly, so it works smoothly on every desktop, smartphone and tablet.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🔨 Process
 
-### `yarn build`
+I tried to make it as close as possible to the actual Office365 application, so I chose similar fonts and colors for this project.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+I ended up using 3 components: **App**, to host the entire application and its logic, **List**, to display every email, and **Item** which is the email itself and its actions.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+The JSON that works as API is being fetched using the Axios lib. After being fetched, I'm adding 3 extra properties to each object returned: **read**, **selected** and **showSelector**, each acting as a boolean flag for each email.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**read** is responsible for marking the email as read. **selected** is the flag that indicates that email has been selected. Finally, **showSelector** tells us that an email has to make its checkbox visible.
 
-### `yarn eject`
+Curiously enough, my main challenge in this project was the CSS. Since I'm using conditional classes, hover conditions and custom checkboxes, I got a bit overwhelmed. But nonetheless, I'm pretty happy with the result.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Finally, PropTypes were added to the projects, with the goal to type check all the props used in the application.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🎨 Palette
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+| Color                            | Hex                             | Color                            | Hex                             |                                                        
+| -------------                    |:-------------:                  | -------------                    |:-------------:                  |
+| ![#000000](https://placehold.it/15/000000/000000?text=+) | #000000 | ![#3E6250](https://placehold.it/15/3E6250/000000?text=+) | #3E6250 |
+| ![#212121](https://placehold.it/15/212121/000000?text=+) | #212121 | ![#5AB075](https://placehold.it/15/5AB075/000000?text=+) | #5AB075 |
+| ![#333333](https://placehold.it/15/333333/000000?text=+) | #333333 | ![#C8C8C8](https://placehold.it/15/C8C8C8/000000?text=+) | #C8C8C8 |
+| ![#545454](https://placehold.it/15/545454/000000?text=+) | #545454 | ![#F6F6F6](https://placehold.it/15/F6F6F6/000000?text=+) | #F6F6F6 |
+| ![#0077D3](https://placehold.it/15/0077D3/000000?text=+) | #0077D3 |
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## 💾 Getting Started
+To build and run this application locally, you'll need latest versions of Git and Node.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+# Clone this repository
+$ git clone https://github.com/msfern/encontact-challenge
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Go into the repository
+$ cd encontact-challenge
 
-### Code Splitting
+# Install the dependencies
+$ npm install 
+$ or
+$ yarn
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+# Start the application
+$ npm start 
+$ or
+$ yarn start
+```
 
-### Analyzing the Bundle Size
+## License
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
