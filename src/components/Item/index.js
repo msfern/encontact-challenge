@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './style.css';
 
 const Item = ({ details, index, deleteEmail, markAsRead, toggleRead, toggleSelect }) => {
@@ -40,6 +41,23 @@ const Item = ({ details, index, deleteEmail, markAsRead, toggleRead, toggleSelec
       </div>
     </div>
   )
+}
+
+Item.propTypes ={
+  details: PropTypes.shape({
+    read: PropTypes.bool,
+    selected: PropTypes.bool,
+    showSelector: PropTypes.bool,
+    initials: PropTypes.string,
+    id: PropTypes.string,
+    Title: PropTypes.string,
+    description: PropTypes.string,
+  }),
+  index: PropTypes.string,
+  deleteEmail: PropTypes.func,
+  markAsRead: PropTypes.func,
+  toggleRead: PropTypes.func,
+  toggleSelect: PropTypes.func,
 }
 
 export default Item
