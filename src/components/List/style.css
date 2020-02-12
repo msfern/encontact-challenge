@@ -12,3 +12,10 @@
   flex-direction: column;
   overflow-y: auto;
 }
+
+@media screen and (max-width: 630px) {
+  .list {
+    max-height: 100%;
+    max-width: 100%;
+  }
+}
