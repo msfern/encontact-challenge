@@ -1,6 +1,12 @@
 {
   "name": "encontact-challenge",
   "version": "0.1.0",
+  "author": "Stephanie Fernandes <steph3001@gmail.com> (https://msfern.netlify.com)",
+  "bugs": {
+    "url": "https://github.com/msfern/encontact-challenge/issues"
+  },
+  "homepage": "https://github.com/msfern/encontact-challenge#readme",
+  "license": "MIT",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
