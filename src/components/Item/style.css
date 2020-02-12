@@ -2,12 +2,76 @@
   display: flex;
   width: 100%;
   padding: 15px;
+  background-color: var(--item);
+  position: relative;
+}
+
+.item:before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 3px;
+  left: 0;
+  top: 0;
+  background-color: var(--titleItem);
+}
+
+.item + .item {
+  border-top: 1px solid var(--black);
+}
+
+.item:hover {
+  background-color: var(--hoveredItem);
+}
+
+.item:hover .item-body__top .icons {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+
+.item:hover .item-left__container .initial,
+.item-left__container.selector-visible .initial {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.item:hover .item-left__container .checkbox,
+.item-left__container.selector-visible .checkbox {
+  display: inline-block;
+  visibility: visible;
+  opacity: 1;
+  -webkit-appearance: none;
+  background-color: var(--item);
+  border: 2px solid var(--textColor);
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  left: 6px;
+  top: 6px;
+  position: absolute;
+}
+
+.item:hover .item-left__container,
+.item-left__container.selector-visible {
+  background-color: transparent;
+}
+
+.item.is-read:before {
+  height: 0;
+  width: 0;
+}
+
+.item.selected {
+  background-color: var(--selectedItem);
 }
 
 .item-body {
   display: flex;
   flex-direction: column;
   min-width: 0;
+  width: 100%;
 }
 
 .item-body__top {
@@ -20,12 +84,22 @@
   font-weight: 600;
 }
 
+.item-body__top .icons {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
 .item-body__top .icons span{
   color: var(--textColor);
 }
 
 .item-body__top .icons span:not(:last-child) {
   margin-right: 12px;
+}
+
+.item.is-read .item-body__top .sender {
+  font-weight: 500;
 }
 
 .item-body__middle {
@@ -48,6 +122,15 @@
   font-size: 0.8rem;
 }
 
+.item.is-read .item-body__middle .title {
+  font-weight: 500;
+  color: var(--textColor);
+}
+
+.item.is-read .item-body__middle .date {
+  color: var(--textColor);
+}
+
 .item-body__bottom {
   width: 100%;
   overflow: hidden;
@@ -60,15 +143,32 @@
   margin-right: 15px;
 }
 
-.item-left__circle {
+.item-left__container {
   border-radius: 50%;
   height: 30px;
   width: 30px;
   position: relative;
+  background-color: var(--blue);
+}
+
+.item-left__container .checkbox {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.item-left__container .checkbox {
+  /* border-radius: 50%; */
+  /* height: 30px; */
+  /* width: 30px; */
+  /* background-color: var(--blue); */
+}
+
+.item-left__container .checkbox:checked {
   background-color: red;
 }
 
-.initial {
+.item-left__container .initial {
   position: absolute;
   top: 50%;
   left: 50%;
