@@ -1,9 +1,3 @@
-<p align="center" >
-  <img src="logo.png" width="200" alt="enContact" style="background-color:#333">
-</p>
-
-# 
-
 <h2 align="center">
 	Front End Challenge
 </h2>
