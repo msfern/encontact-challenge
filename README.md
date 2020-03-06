@@ -14,7 +14,7 @@ As per the [challenge description](https://github.com/EnkiGroup/DevPlenoTest/blo
 
 ## 🔨 Process
 
-I tried to make it as close as possible to the actual Office365 application, so I chose similar fonts and colors for this project.
+I tried to make it look as similar as possible to the actual Office365 application, so I chose similar fonts and colors for this project.
 
 I ended up using 3 components: **App**, to host the entire application and its logic, **List**, to display every email, and **Item** which is the email itself and its actions.
 
